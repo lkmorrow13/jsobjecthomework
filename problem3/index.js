@@ -24,6 +24,9 @@ class Library {
 			}
 		}
 	}
+	countBook(){
+		return this.shelves.length;
+	}
 }
 
 
@@ -42,11 +45,13 @@ var honour = new Book('Honour Guard', 'Dan Abnett', 'Scifi');
 var tanith = new Book('The guns of Tanith', 'Dan Abnett', 'Scifi');
 var sabbat = new Book('Sabbat Martyr', 'Dan Abnett', 'Scifi');
 
+
 myShelf.addBook(first);
 myShelf.addBook(necro);
 myShelf.addBook(honour);
 myShelf.addBook(tanith);
 myShelf.addBook(sabbat);
+console.log(myShelf.countBook());
 console.log(myShelf);
 console.log(myShelf.findBook('First & Only'));
 myShelf.removeBook('Necropolis');
